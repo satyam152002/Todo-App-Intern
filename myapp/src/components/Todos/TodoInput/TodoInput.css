@@ -1,0 +1,70 @@
+.todo-input-container
+{
+    position: fixed;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+.todo-input-container .todo-rest
+{
+    display: flex;
+    flex-direction: row;
+}
+.todo-input-container .todo-rest input[type="text"]
+{
+    flex: 1;
+}
+.todo-input-container .todo-rest input
+{
+    letter-spacing: .1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: .3rem 1rem;
+    margin: 0;
+}
+.todo-input-container .todo-rest button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: .5rem 2rem;
+}
+.todo-input-container .todo-date-container
+{
+    display: flex;
+    align-items: center;
+}
+.todo-input-container .todo-date-container span
+{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    padding: .65rem .5rem;
+    background-color: inherit;
+    font-weight: 600;
+}
+.todo-input-container .todo-date-container input
+{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    appearance: none;
+    flex: 1;
+    z-index: 100;
+}
+/* .todo-input-container .todo-date-container input::before
+{
+    content: 'Pick A Date';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    right: 0;
+    top: 0;
+    padding: .6rem 1rem;
+} */

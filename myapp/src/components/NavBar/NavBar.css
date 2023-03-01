@@ -1,0 +1,42 @@
+.nav-bar
+{
+    display: flex;
+    flex-direction: column;
+}
+.nav-bar .nav-header
+{
+    background-color: hsl(23, 100%, 51%);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: .25rem;
+    font-weight: 700;
+}
+.nav-bar  .nav-links
+{
+    background-color: hsl(190, 90%, 39%);
+    display: flex;
+    justify-content: space-around;
+}
+.nav-bar .nav-links a
+{
+    text-align: center;
+    flex: 1;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    padding: .25rem;
+}
+.nav-bar .nav-links a:hover
+{
+    background-color: hsl(190, 85%, 31%);
+}
+.nav-bar .nav-links .fa-list ,.nav-bar .nav-links .fa-user
+{
+    margin-right:.5rem ;
+    font-size: 1.2rem;
+}
+.nav-bar .nav-links a:first-child
+{
+    border-right: whitesmoke 1px solid;
+}

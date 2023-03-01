@@ -1,0 +1,74 @@
+.todo-container
+{
+    margin-bottom: 5rem;
+}
+.todo-item
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+[data-date]::before
+{
+    content: attr(data-date);
+    position: absolute;
+    bottom: 0;
+    font-size: .7rem;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+.todo-item  input
+{
+    transform: scale(1.5);
+    margin: .2rem 1rem;
+}
+.todo-item  span
+{
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: .12rem;
+    flex: 1;
+    padding-bottom: .2rem;
+}
+i.todo-delete-icon
+{
+    font-size: 1.5rem;
+    color: hsl(0, 92%, 46%);
+}
+
+/* 
+.filter-container
+{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 85%);
+    padding: .5rem;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 10px black;
+}
+.filter-container .filter-input,.filter-container .filter-label
+{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.filter-container .filter-input input
+{
+    text-align: center;
+    flex: 1;
+    font-size: 1rem;
+    background-color: rgb(233, 220, 163);
+}
+.filter-container .filter-label span
+{
+    flex: 1;
+    text-align: center;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+    font-weight: 650;
+}
+
+.filter-container .filter-label span:first-child
+{
+    border-right: 1px solid grey;
+} */
