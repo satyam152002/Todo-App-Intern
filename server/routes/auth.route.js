@@ -44,8 +44,6 @@ router.post('/register',async (req,res)=>{
 
 router.post('/login',async (req,res)=>{
     const {username,password}=req.body;
-
-    console.log(req.body)
     if(username==null||password==null)
         return res.status(400).send("Invalid Request")
     try
@@ -65,6 +63,7 @@ router.post('/login',async (req,res)=>{
     }
     catch(e)
     {
+        console.log("Error 123")
         return res.status(500).send(e.message)
     }
 })
