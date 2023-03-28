@@ -1,12 +1,26 @@
 services:
   mongo:
     image: mongo
+    restart: always
     ports:
       - 27017:27017
     volumes:
       - ./server/db/:/data/db    
+
+  client:
+    build: ./myapp/
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_SERVER_URL=http://localhost:8080
+    depends_on:
+      - mongo
+      - server
+
   server:
     build: ./server/
+    restart: always
     ports:
       - "8080:8080"
     environment:
@@ -17,13 +31,3 @@ services:
       - CLIENT_URL=http://localhost:3000
     depends_on:
       - mongo
-  client:
-    build: ./myapp/
-    ports:
-      - "3000:3000"
-    environment:
-      - REACT_APP_SERVER_URL=http://localhost:8080
-    depends_on:
-      - mongo
-      - server
-

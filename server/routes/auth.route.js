@@ -63,7 +63,7 @@ router.post('/login',async (req,res)=>{
     }
     catch(e)
     {
-        console.log("Error 123")
+        console.log("Error",e.message)
         return res.status(500).send(e.message)
     }
 })
